@@ -1,5 +1,5 @@
 <div><a href="/">home</a> </div>
-<a href="{{route ('categories.create') }}">new category</a>
+<a href="{{route ('departments.create') }}">new departments</a>
 
 @if(session('message'))
     <div style="color:green;">{{session('message') }}</div>
@@ -10,23 +10,21 @@
     <tr>
         <td>no</td>
         <td>name</td>
-        <td>description</td>
         <td>timestamp</td>
         <td>action</td>
     </tr>
     </thead>
     <tbody>
-    @forelse($categories as $key => $category)
+    @forelse($departments as $key => $department)
         <tr>
-            <td>{{ $categories->firstItem() + $key }}.</td>
-            <td>{{ $category->name }}</td>
-            <td>{{ $category->description }}</td>
-            <td>{{ $category->created_at->format('F d, Y') }}</td>
+            <td>{{ $departments->firstItem() + $key }}.</td>
+            <td>{{ $department->name }}</td>
+            <td>{{ $department->created_at->format('F d, Y') }}</td>
 
             <td>
-                <a href="{{ route('categories.edit', $category) }}">edit</a>
+                <a href="{{ route('departments.edit', $department) }}">edit</a>
 
-                <form action="{{route('categories.delete', $category) }}" method="post">
+                <form action="{{route('departments.delete', $department) }}" method="post">
                     @csrf
                     <button type="submit">delete</button>
                 </form>
