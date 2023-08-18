@@ -6,7 +6,9 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\ProvidersController;
+
 
 
 route::get('/categories',[CategoryController::class,'index'])
@@ -104,23 +106,42 @@ Route::post('/customers/delete/{customer}', [CustomerController::class, 'destroy
     ->name('customers.delete');
 
 
-Route::get('/employees', [EmployeeController::class, 'index'])
+Route::get('/employees', [EmployeesController::class, 'index'])
     ->name('employees.index');
 
-Route::get('/employees/create', [EmployeeController::class, 'create'])
+Route::get('/employees/create', [EmployeesController::class, 'create'])
     ->name('employees.create');
 
-Route::post('/employees/create', [Employeesontroller::class, 'store'])
+Route::post('/employees/create', [EmployeesController::class, 'store'])
     ->name('employees.create');
 
-Route::get('/employees/edit/{employees}', [EmployeeController::class, 'edit'])
+Route::get('/employees/edit/{employees}', [EmployeesController::class, 'edit'])
     ->name('employees.edit');
 
-Route::post('/employees/edit/{employees}', [EmployeeController::class, 'update'])
+Route::post('/employees/edit/{employees}', [EmployeesController::class, 'update'])
     ->name('employees.edit');
 
-Route::post('/employees/delete/{employees}', [EmployeeController::class, 'destroy'])
+Route::post('/employees/delete/{employees}', [Employeesontroller::class, 'destroy'])
     ->name('employees.delete');
+
+
+Route::get('providers/', [ProvidersController::class, 'index'])
+    ->name('providers.index');
+
+Route::get('/providers/create', [ProvidersController::class, 'create'])
+    ->name('providers.create');
+
+Route::post('/providers/create', [ProvidersController::class, 'store'])
+    ->name('providers.create');
+
+Route::get('/providers/edit/{provider}', [ProvidersController::class, 'edit'])
+    ->name('providers.edit');
+
+Route::post('/providers/edit/{provider}', [ProvidersController::class, 'update'])
+    ->name('providers.edit');
+
+Route::post('/providers/delete/{provider}', [ProvidersController::class, 'destroy'])
+    ->name('providers.delete');
 
 
 

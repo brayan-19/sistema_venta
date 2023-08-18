@@ -9,10 +9,9 @@
     <thead>
     <tr>
         <td>name</td>
-        <td>last name</td>
+        <td>last_name</td>
         <td>identification card</td>
         <td>phone</td>
-        <td>mail</td>
         <td> Action </td>
     </tr>
     </thead>

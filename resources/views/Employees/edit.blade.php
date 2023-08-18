@@ -1,18 +1,20 @@
 <div style="margin-bottom: 1em;">
-    <a href="{{ route('customers.index') }}">customer list</a>
+    <a href="{{ route ('employees.index') }}">employees list</a>
 </div>
-<h1> Edit customer</h1>
+
+<h1>Edit employees</h1>
 
 @if(session('message'))
-    <div style="color: green;">{{ session('message') }}</div>
+    <div style="color:green;">{{session('message') }}</div>
 @endif
-<form action="{{ route('customers.edit',$customer) }}" method="post">
+
+<form action="{{ route('employees.edit', $employees) }}" method="post">
     @csrf
-    <div style="margin-bottom: 1em;">
+    <div style="margin-bottom:1em;">
         <label for="name">name</label>
-        <input type="text" name="name" id="name" placeholder="Enter customer" value="{{ $customer->name }}">
+        <input type="text" name="name" id="name" placeholder="Enter name" value="{{ $department->name }}">
         @error('name')
-        <div style="color: red;">{{ $message }}</div>
+        <div style="color:red;">{{ $message }}</div>
         @enderror
     </div>
     <div style="margin-bottom: 1em;">
@@ -53,8 +55,8 @@
         <div style="color: red;">{{ $message }}</div>
         @enderror
     </div>
+
     <div>
         <button type="submit">submit</button>
     </div>
 </form>
-
