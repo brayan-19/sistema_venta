@@ -28,7 +28,6 @@ class CustomerController extends Controller
             'lastname' =>'required|max:255',
             'identification_card' =>'required|max:255',
             'phone' =>'required|max:255',
-            'mail' =>'required|max:255',
             'city_id' =>'required|integer',
         ]);
         Customer:: create ($data);
@@ -47,7 +46,6 @@ class CustomerController extends Controller
             'lastname' =>'required|max:255',
             'identification_card' =>'required|max:255',
             'phone' =>'required|max:255',
-            'mail' =>'required|max:255',
             'city_id' =>'required|integer',
         ]);
 

@@ -17,7 +17,7 @@
         @enderror
     </div>
     <div style="margin-bottom: 1em;">
-        <label for="last_name">last name</label>
+        <label for="last_name">last_name</label>
         <input type="text"name="last_name" id="last_name" placeholder="Enter last_name" value="{{ old ('last_name') }}">
         @error('last_name')
         <div style="color:red;">{{ $message }}</div>

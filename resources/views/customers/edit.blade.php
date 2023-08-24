@@ -24,8 +24,8 @@
     </div>
     <div style="margin-bottom: 1em;">
         <label for="identification_card">identification card</label>
-        <input type="text" name="identification card"placeholder="enter identification_card" value="{{ $customer->identification_card}}">
-        @error('identification card')
+        <input type="text" name="identification_card"placeholder="enter identification_card" value="{{ $customer->identification_card}}">
+        @error('identification_card')
         <div style="color: red;">{{ $message }}</div>
         @enderror
     </div>
